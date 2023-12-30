@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SectionItemWarpper = styled.div`
- display: flex;
+ display:  flex;
  flex-wrap: wrap;
  margin: 0 -8px;
 `

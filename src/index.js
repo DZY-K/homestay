@@ -7,19 +7,23 @@ import App from '@/App.jsx';
 import "normalize.css"
 import "@/assets/css/index.less"
 import store from './store';
-import { ThemeProvider } from 'styled-components';
+import { StyleSheetManager, ThemeProvider } from 'styled-components';
 import theme from './assets/theme';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-  <Suspense fallback={"Loading"}>
+  <StyleSheetManager>
+
     <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <HashRouter>
-          <App />
-        </HashRouter>
-      </ThemeProvider>
+      <Suspense fallback={"Loading"}>
+        <ThemeProvider theme={theme}>
+          <HashRouter>
+            <App />
+          </HashRouter>
+        </ThemeProvider>
+      </Suspense>
     </Provider>
-  </Suspense>
+
+  </StyleSheetManager>
   // </React.StrictMode>
 )

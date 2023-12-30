@@ -16,11 +16,12 @@ font-weight: 550;
   height: 42px;
   text-align: center;
   line-height: 42px;
-  color: var(--font-color);
+  color: ${props => props.theme.isTran ? "#fff" : "var(--font-color)"};
   padding: 0 3px;
   &:hover {
   border-radius: 22px;
   background-color: #F0F0F0;
+  color: #000;
 }
 }
 .area {
@@ -37,7 +38,8 @@ font-weight: 550;
   padding: 8px 8px 8px 16px;
   border: 1px solid var(--border-color);
   border-radius: 30px;
-  color: var(--icon-color);
+ 
+  color: ${props => props.theme.isTran ? "#fff" : "var(--font-color)"};
   ${props => props.theme.mixin.boxShadow}
   .option {
     position: absolute;

@@ -13,13 +13,14 @@ class HYRequest {
     })
   }
   request(config) {
-    return new Promise((resolve, reject) => {
-      this.instance.request(config).then(res => {
-        resolve(res)
-      }).catch(err => {
-        reject(err)
-      })
-    })
+    // return new Promise((resolve, reject) => {
+    // this.instance.request(config).then(res => {
+    // resolve(res)
+    // }).catch(err => {
+    // reject(err)
+    // })
+    // })
+    return this.instance.request(config)
   }
   get(config) {
     return this.request({ ...config, method: "get" })

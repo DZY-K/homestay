@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
 export const SectionTabsWarpper = styled.div`
-  display: flex;
-  align-items: center;
+position: relative;
   .cityName {
-    width: 125px;
-    height: 40px;
+    flex-shrink: 0;
+    flex-basis: 120px;
     line-height: 40px;
     text-align: center;
     margin-right: 12px;
@@ -17,7 +16,7 @@ export const SectionTabsWarpper = styled.div`
     /* } */
     cursor: pointer;
     user-select:none;
-
+    ${props => props.theme.mixin.boxShadow}
   }
   .active {
   background-color: ${props => props.theme.color.secondaryColor};

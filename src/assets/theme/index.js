@@ -21,6 +21,11 @@ const theme = {
     size: `
     font-size: 12px;
     `
+  },
+  itemActiveBgColor: {
+    bgColor: `
+    itemActiveBg: #000;
+    `
   }
 }
 export default theme

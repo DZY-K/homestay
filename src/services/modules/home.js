@@ -19,3 +19,13 @@ export function getHotRecommendData() {
     url: "/home/hotrecommenddest"
   })
 }
+export function getHotCityData() {
+  return hyRequest.get({
+    url: "/home/longfor"
+  })
+}
+export function getPlusRoomData() {
+  return hyRequest.get({
+    url: "/home/plus"
+  })
+}
