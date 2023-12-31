@@ -27,7 +27,7 @@ const Home = memo(() => {
 
   return (
     <HomeWarpper>
-      <Header isfix="true" />
+      <Header isfix="true" isScroll={true}/>
       <HomeBanner />
       <div className="content">
         {/* 折扣/选择城市 */}

@@ -21,7 +21,7 @@ const Detail = memo((props) => {
   }
   return (
     <DetailWarpper>
-      <Header isfix={false} />
+      <Header isfix={false} isScroll={false} />
       <Picture itemPictures={itemData} isShow={() => setIsShow(true)} />
       <div className="showPicture" onClick={showP}>查看图片</div>
       { isShow && <PictureBrowser isShow={() => setIsShow(false)} 

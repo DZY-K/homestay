@@ -7,7 +7,7 @@ import useScrollTrigger from '@/hooks/scroll'
 import { ThemeProvider } from 'styled-components'
 
 const Header = memo((props) => {
-  const { isfix } = props
+  const { isfix , isScroll} = props
   const [show, setShow] = useState(false)
   // console.log(isfix)
   function isShow() {
@@ -18,7 +18,7 @@ const Header = memo((props) => {
   let scorllValue = useRef(0)
   if (!show) scorllValue.current = scorllY
   if (show && Math.abs(scorllY - scorllValue.current) > 10) setShow(false)
-  const isTran = scorllY === 0
+  const isTran = isScroll && scorllY === 0
   return (
     <ThemeProvider theme={{ isTran }}>
       <HeaderWrapper isfix={isfix ? "fixed" : "absolute"}>

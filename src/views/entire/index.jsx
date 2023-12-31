@@ -19,7 +19,7 @@ const Entire = memo((props) => {
   }, [dispatch, currentPage])
   return (
     <EntireWarpper>
-      <Header  isfix="true" />
+      <Header  isfix="true" isScroll={false}/>
       <FilterData/>
       <EntireMainContent listData={allList} isLoading={isLoading}/>
       <EntirePager pagerData={allList}  />
